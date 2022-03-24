@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Asap, sans-serif;
+    color:white;
+}
+
+body{
+    background-color: #333333;
+}
+
+p{
+    margin-left: 10px;
+}
+
+#p1{
+    margin-left: 100px;
+    float: left;
+}
+
+.slider{
+    margin-left: 100px;
+}

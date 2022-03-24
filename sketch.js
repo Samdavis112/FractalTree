@@ -1,23 +1,35 @@
-var angle;
-var slider;
+let angle;
+let slider;
+let slider2;
+let depth;
+let slider3;
+let maxLength;
 
 function setup() {
-  createCanvas(800, 800);
-  slider = createSlider(0, (2 * Math.PI), Math.PI / 4, 0.01);
+    slider = createSlider(0, (2 * Math.PI), Math.PI / 4, 0.01);
+    slider2 = createSlider(0, 5, 0, 1);
+    slider3 = createSlider(50, 200, 0, 1);
+    let myCanvas = createCanvas(600, 600);
+    myCanvas.parent("BoxForCanvas");
+    slider.addClass("slider");
+    slider.addClass("slider");
+    slider.addClass("slider");
 }
 
 function draw() {
-  background(51);
-  angle = slider.value();
-  stroke(255);
-  translate(400, 700);
-  branch(200);
+    angle = slider.value();
+    depth = slider2.value();
+    maxLength = slider3.value();
+    background(51);
+    stroke(255);
+    translate(350, 500);
+    branch(200 - maxLength);
 }
 
 function branch(len) {
   line(0, 0, 0, -len);
   translate(0, -len);
-  if (len > 4) {
+  if (len > 6-depth) {
     push();
     rotate(angle);
     branch(len * 0.67);
@@ -27,6 +39,5 @@ function branch(len) {
     branch(len * 0.67);
     pop();
   }
-
  
 }
