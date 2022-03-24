@@ -12,15 +12,31 @@ body{
     background-color: #333333;
 }
 
-p{
-    margin-left: 10px;
+#BoxForCanvas{
+    text-align: center;
 }
 
-#p1{
-    margin-left: 100px;
-    float: left;
+#Controls{
+    width: 500px;
+    margin: 0 auto;
+}
+
+#tags{
+    height: 20px;
+    display: flex;
+
+}
+
+.tag{
+    width: 129px;
+    margin-right: 20px;
+}
+
+#sliders{
+    display: flex;
+
 }
 
 .slider{
-    margin-left: 100px;
+    margin-right: 20px;
 }
